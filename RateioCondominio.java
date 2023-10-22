@@ -1,4 +1,4 @@
-package aula01programacaoavancada;
+﻿package aula01programacaoavancada;
 
 import javax.swing.JOptionPane;
 
@@ -14,19 +14,28 @@ public class Aula01ProgramacaoAvancada {
         
         String quantidadeString = JOptionPane.showInputDialog("Digite a quantidade de apartamentos: ");
         int quantidade = Integer.parseInt(quantidadeString);
-                        
-            for(int i = 1; i <= quantidade; i++){
+        
+        int consumo = 0;
+        
+                do{
+                
+                for(int i = 1; i <= quantidade; i++){
                 String apartString = JOptionPane.showInputDialog(" Digite a quantidade consumida do apartamento " + i);
                 int apart = Integer.parseInt(apartString);
                 int total = (totalfatura * apart) / consumoagua;
                 
-                JOptionPane.showMessageDialog(null,"O apartamento " + i + " pagara " + total);
+                consumo = apart + consumo;
                 
-        
-        }
-        
+                if (consumo > consumoagua){
+                    JOptionPane.showMessageDialog(null,"Consumo dos apartamento maior que consumo da fatura, repetir contagem");
+                    return;
+                }else{
+                    JOptionPane.showMessageDialog(null,"O apartamento " + i + " pagara " + total);
+                    }
+                
+                }
+                }while(consumo < consumoagua);
+                
     }
         
 }
-    
-
