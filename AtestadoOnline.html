@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Atestado Médico</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin: 0 auto;
+                padding: 0px;
+            }
+            h1{
+                padding: 30px;
+                background-color: gray;
+                color: cyan;
+                text-transform: uppercase;
+            }            
+            body{
+                text-align: center;
+            }
+            #container{
+                padding: 30px;
+                
+            }
+            #container #cxtexto{
+               margin: 10px;
+               width: 200px;
+            }
+            #botao{
+                width: 150px;
+                margin: 10px;
+            }
+            
+            #cid{
+                background: white;
+                width: 150px;
+                margin: 10px;                
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Atestado Médico Online</h1>
+        <hr>
+        <div id="container">
+        <form method="POST" action="#">
+            Nome do Médico: <input id="cxtexto" type="text" name="doctor"/><br>
+            Paciente: <input id="cxtexto" type="text" name="patient"/><br>
+            Endereço: <input id="cxtexto" type="text" name="adress"/><br>
+            Cidade: <input id="cxtexto" type="text" name="city"/><br>
+            Doença: <select id="cid">
+                <option>1 - Febre</option>
+                <option>2 - Dor no Corpo</option>
+                <option>3 - Tontura</option>
+                <option>4 - Perna Quebrada</option>
+                <option>5 - DOr na Coluna</option>
+            </select><br>
+            <input id="botao" type="submit" value="Enviar"/>
+        </form>
+        </div>
+    </body>
+</html>
